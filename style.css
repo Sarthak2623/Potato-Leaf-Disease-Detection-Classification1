@@ -1,0 +1,76 @@
+/* potatoGuardProject Custom Styles */
+
+/* Smooth Tab transitions */
+.tab-content {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Nav Tab Active State */
+.nav-tab.active {
+  color: #047857 !important;
+  background-color: #ecfdf5 !important;
+  font-weight: 700;
+}
+
+/* Sample Card Selection */
+.sample-card.active {
+  border-color: #059669;
+  background-color: #ecfdf5;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3);
+}
+
+/* Drag & Drop Highlight */
+#drop-zone.drag-over {
+  border-color: #059669;
+  background-color: #ecfdf5;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Print Styles for Diagnostic Certificate / Report */
+@media print {
+  header, footer, #tab-btn-detector, #tab-btn-encyclopedia, #tab-btn-architecture,
+  .lg\:col-span-5, #webcam-btn, .vis-btn, button {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  main {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  .lg\:col-span-7 {
+    width: 100% !important;
+  }
+  #results-panel {
+    display: block !important;
+  }
+}
+
